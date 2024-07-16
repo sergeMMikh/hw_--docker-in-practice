@@ -31,6 +31,7 @@ See 'snap info docker' for additional versions.
 2. Запустил в контейнере Mysql
    * <img src="images/Task_1_1.png" alt="Task_1_1.png" width="750" height="auto">
 3. Запустил проект без докера с спользованием виртуального окружения
-   * <img src="images/Task_1_11.png" alt="Task_1_11.png" width="500" height="auto">
+   * <img src="images/Task_1_11.png" alt="Task_1_11.png" width="600" height="auto">
    * <img src="images/Task_1_3.png" alt="Task_1_3.png" width="200" height="auto">
-4. Для испотльзования переменнх окружения установил библиотеку *dotenv*.
+4. Как вариант развития темы для чтения переменнх окружения из файла .env можно установть библиотеку *dotenv*. На скриншоте приведёт вариант отладки подключения к базе данных.
+   * <img src="images/Task_1_12.png" alt="Task_1_12.png" width="350" height="auto">
