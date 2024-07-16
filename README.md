@@ -17,4 +17,4 @@ See 'snap info docker' for additional versions.
 
 **Решение**
 - скриншот веб-интерфейса RabbitMQ
-  * <img src="images/Task_0.png" alt="Task_0.png" width="150" height="auto">
+  * <img src="images/Task_0.png" alt="Task_0.png" width="250" height="auto">
