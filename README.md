@@ -30,4 +30,7 @@ See 'snap info docker' for additional versions.
 1. Создан [Dockerfile.python](Dockerfile.python)
 2. Запустил в контейнере Mysql
    * <img src="images/Task_1_1.png" alt="Task_1_1.png" width="750" height="auto">
-3. ыы
+3. Запустил проект без докера с спользованием виртуального окружения
+   * <img src="images/Task_1_2.png" alt="Task_1_2.png" width="500" height="auto">
+   * <img src="images/Task_1_3.png" alt="Task_1_3.png" width="200" height="auto">
+4. Для испотльзования переменнх окружения установил библиотеку *dotenv*.
