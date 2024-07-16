@@ -25,3 +25,9 @@ See 'snap info docker' for additional versions.
 3. (Необязательная часть, *) Изучите инструкцию в проекте и запустите web-приложение без использования docker в venv. (Mysql БД можно запустить в docker run).
 4. (Необязательная часть, *) По образцу предоставленного python кода внесите в него исправление для управления названием используемой таблицы через ENV переменную.
 ---
+
+**Решение**
+1. Создан [Dockerfile.python](Dockerfile.python)
+2. Запустил в контейнере Mysql
+   * <img src="images/Task_1_1.png" alt="Task_1_1.png" width="750" height="auto">
+3. ыы
