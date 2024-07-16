@@ -1,14 +1,16 @@
 from flask import Flask
 from flask import request
 import os
+from dotenv import load_dotenv
 import mysql.connector
 from datetime import datetime
 
 app = Flask(__name__)
-db_host=os.environ.get('DB_HOST')
-db_user=os.environ.get('DB_USER')
-db_password=os.environ.get('DB_PASSWORD')
-db_database=os.environ.get('DB_NAME')
+load_dotenv()
+db_host = os.getenv('DB_HOST', 'localhost')
+db_user = os.getenv('DB_USER', 'app')
+db_password = os.getenv('DB_PASSWORD', 'QwErTy1234')
+db_database = os.getenv('DB_NAME', 'virtd')
 
 # Подключение к базе данных MySQL
 db = mysql.connector.connect(
