@@ -11,6 +11,7 @@ venv.bak/
 # Local .terraform directories
 **/.terraform/*
 provider.tf
+.terraform.lock.hcl
 
 # .tfstate files
 *.tfstate
