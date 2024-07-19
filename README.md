@@ -14,7 +14,7 @@ See 'snap info docker' for additional versions.
 В случае наличия установленного в системе ```docker-compose``` - удалите его.  
 2. Убедитесь что у вас УСТАНОВЛЕН ```docker compose```(без тире) версии не менее v2.24.X, для это выполните команду ```docker compose version```  
 ###  **Своё решение к задачам оформите в вашем GitHub репозитории!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!**
-
+---
 **Решение**
 - скриншот веб-интерфейса RabbitMQ
   * <img src="images/Task_0.png" alt="Task_0.png" width="250" height="auto">
@@ -75,4 +75,23 @@ See 'snap info docker' for additional versions.
 5. (Необязательная часть) Дополнительно настройте remote ssh context к вашему серверу. Отобразите список контекстов и результат удаленного выполнения ```docker ps -a```
 6. В качестве ответа повторите  sql-запрос и приложите скриншот с данного сервера, bash-скрипт и ссылку на fork-репозиторий.
 
+---
 
+**Решение**
+ В виду нестабильной геополитической ситуации в мире я вынужден пользоваться услугами Amazon AWS вместо Yandex Cloud. Для уменьшения итоговой стоимости проекта я решил использовать terraform.
+1. Создал директорию [terraform](terraform) соответствующим наполнением.
+2. Написал скрипт [install_docker_docker-compose.sh](install_docker_docker-compose.sh) для установки Докера на ВМ. 
+3. В файле терраформа [userdata.tpl](terraform/userdata.tpl) написал исполнение слежующих процедур при запуске хоста:
+-  Обновление системы и установка необходимых пакетов
+-  Клонирование репозитория hw_--docker-in-practice
+-  Запуск скрипта для установки Docker и Docker Compose
+-  Запуск Docker Compose файла
+4. Вывел минимальную информацию о созданном сервере для дальнейшего выполнения задания
+   * <img src="images/Task_4_1.png" alt="Task_4_1.png" width="450" height="auto">
+5. В [security_group.tf](terraform/security_group.tf) разрешил пропуск трафика на порт 8090
+6. В соответсвии с заданием выполнил проверку через сайт ```https://check-host.net/check-http```
+   * <img src="images/Task_4_2.png" alt="Task_4_2.png" width="500" height="auto">
+7. В настройках aws_instance указал использование внешнего ssh ключа. Результат удаленного выполнения ```docker ps -a```:
+   * <img src="images/Task_4_3.png" alt="Task_4_3.png" width="800" height="auto">
+8. Скриншот запросов к базе данных сервера
+   * <img src="images/Task_4_4.png" alt="Task_4_4.png" width="450" height="auto">
