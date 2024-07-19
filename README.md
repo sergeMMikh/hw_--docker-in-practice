@@ -62,4 +62,6 @@ See 'snap info docker' for additional versions.
    * <img src="images/Task_2_1.png" alt="Task_2_1.png" width="450" height="auto">
    С точки зрения необходимости получения эстетического удовольствия от проделанной работы проверил в браузере.
    * <img src="images/Task_2_2.png" alt="Task_2_2.png" width="200" height="auto">
+3. Получил данные из базы virtd контейнера db
+   * <img src="images/Task_2_3.png" alt="Task_2_3.png" width="300" height="auto">
    
