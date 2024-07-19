@@ -53,3 +53,13 @@ See 'snap info docker' for additional versions.
 5. Подключитесь к БД mysql с помощью команды ```docker exec <имя_контейнера> mysql -uroot -p<пароль root-пользователя>```(обратите внимание что между ключем -u и логином root нет пробела. это важно!!! тоже самое с паролем) . Введите последовательно команды (не забываем в конце символ ; ): ```show databases; use <имя вашей базы данных(по-умолчанию example)>; show tables; SELECT * from requests LIMIT 10;```.
 
 6. Остановите проект. В качестве ответа приложите скриншот sql-запроса.
+
+**Решение**
+
+1. Создан [compose.yaml](compose.yaml) соответствующими сервисами.
+2. Запустил проект в WSl
+   ```docker compose -f compose.yaml up -d```
+   * <img src="images/Task_2_1.png" alt="Task_2_1.png" width="450" height="auto">
+   С точки зрения необходимости получения эстетического удовольствия от проделанной работы проверил в браузере.
+   * <img src="images/Task_2_2.png" alt="Task_2_2.png" width="200" height="auto">
+   
