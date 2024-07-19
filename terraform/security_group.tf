@@ -9,7 +9,7 @@ resource "aws_security_group" "external_net" {
 
   # Incoming trafic
   dynamic "ingress" {
-    for_each = ["80", "443", "8080", "22"]
+    for_each = ["80", "443", "8080", "22", "8090"]
     content {
       from_port   = ingress.value
       to_port     = ingress.value
