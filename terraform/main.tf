@@ -1,8 +1,6 @@
 resource "aws_instance" "nginx_srv" {
   count = 1
-  # ami             = "ami-099b7bab1b9843525" # Amazon Linux AMI
   ami           = data.aws_ami.latest_ubuntu.id
-  # ami = "ami-075d8cd2ff03fa6e9" # Debian 12 (HVM), EBS General Purpose (SSD) Volume Type.
 
   instance_type = "t4g.micro"
 
@@ -13,13 +11,24 @@ resource "aws_instance" "nginx_srv" {
   ]
 
   tags = {
-    Name    = "CrystallTest"
+    Name    = "teas_app"
     Owner   = "SMMikh"
-    Project = "CrystallPazels."
+    Project = "hw_--docker-in-practice."
   }
+
+  user_data = templatefile("userdata.tpl",
+    {
+      project_name = "Home Work. ",
+      description  = "This is my homework on Devops engeneer course by Netology",
+      owner        = "SMMikh"
+      USER         = "ubuntu"
+  })
+
 
   lifecycle {
     create_before_destroy = true
     # ignore_changes        = [user_data]
   }
 }
+
+
